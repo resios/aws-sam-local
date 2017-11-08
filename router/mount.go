@@ -14,6 +14,10 @@ type ServerlessRouterMount struct {
 	Path      string
 	Method    string
 	UsePrefix bool
+	// authorization settings
+	AuthType       string
+	AuthFunction   *AWSServerlessFunction
+	IntegrationArn *LambdaFunctionArn
 }
 
 // Methods gets an array of HTTP methods from a AWS::Serverless::Function
